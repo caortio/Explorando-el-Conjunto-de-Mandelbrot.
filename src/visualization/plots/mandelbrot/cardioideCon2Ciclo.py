@@ -1,5 +1,5 @@
 """
-Cardioide principal + disco (2-ciclo atractor) en el plano complejo.
+Cardioide principal y 2-ciclo atractor en el plano complejo.
 """
 
 import numpy as np
@@ -25,7 +25,6 @@ def plot_cardioide_con_disco():
     x_disk = center_real + radius * np.cos(t_disk)
     y_disk = center_imag + radius * np.sin(t_disk)
 
-    # Figura
     fig = plt.figure(figsize=(6, 6), dpi=300)
     ax = plt.gca()
 
