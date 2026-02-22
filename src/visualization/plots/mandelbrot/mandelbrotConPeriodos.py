@@ -8,8 +8,6 @@ from matplotlib.colors import LinearSegmentedColormap
 from matplotlib.path import Path as MatPath 
 from pathlib import Path
 
-
-
 def iterate_fc_and_derivative(c, p):
     z = 0j
     dzdc = 0j
@@ -17,7 +15,6 @@ def iterate_fc_and_derivative(c, p):
         dzdc = 2 * z * dzdc + 1
         z = z * z + c
     return z, dzdc
-
 
 def newton_center(c0, p, tol=1e-14, max_iter=50):
     c = c0
@@ -86,12 +83,10 @@ def filter_centers(centers, max_period, min_dist):
     return selected
 
 def plot_mandelbrot_con_centros_periodicos():
-    # Parámetros de cálculo de centros
     MAX_PERIOD_COMPUTE = 8
     MAX_PERIOD_LABEL   = 7
     MIN_LABEL_DISTANCE = 0.08
 
-    # Calcular centros periódicos
     all_centers = {}
     for p in range(1, MAX_PERIOD_COMPUTE + 1):
         print(f" → período {p}")
