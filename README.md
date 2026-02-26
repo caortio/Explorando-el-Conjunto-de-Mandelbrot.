@@ -1,4 +1,4 @@
-# Conjunto de Mandelbrot y Conjunto de Julia lleno
+# Explorando el Conjunto de Mandelbrot.
 
 Trabajo Fin de Grado Matemáticas - Universidad de La Rioja 
 Carmen Ortiz Olivan, Curso 2025-2026
