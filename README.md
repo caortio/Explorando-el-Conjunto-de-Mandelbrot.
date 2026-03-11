@@ -28,4 +28,4 @@ python src/visualization/nombreFichero.py
 <video autoplay loop muted width="700">
   <source src="videos/julia_mandelbrot.mp4" type="video/mp4">
 </video>
-<p><a href="videos/julia_mandelbrot.mp4" target="_blank">Abrir en pantalla completa</a></p>
+<p><a href="julia_mandelbrot.mp4" target="_blank">Abrir en pantalla completa</a></p>
