@@ -127,13 +127,34 @@ def plot_mandelbrot_con_centros_periodicos():
 
     plt.imshow(M, extent=[re[0], re[-1], im[0], im[-1]], origin="lower", cmap=cmap_custom)
 
+    #Ejes visibles
+    ax = plt.gca()
+
+    ax.tick_params(
+        axis="both",
+        direction="out",
+        length=4,
+        width=0.8,
+        colors="black"
+    )
+
+    ax.set_xticks(np.arange(-2, 1.1, 0.5))
+    ax.set_yticks(np.arange(-1.2, 1.21, 0.4))
+
+    for spine in ax.spines.values():
+        spine.set_linewidth(0.8)
+        spine.set_color("black")
+
+    #Ejes no visibles
+    #plt.xticks([])
+    #plt.yticks([])
+    
     # Etiquetas de períodos
     for p, c in labels:
         plt.text(c.real, c.imag, str(p), fontsize=11, color="black", ha="center", va="center",
             bbox=dict(facecolor="white", edgecolor="none", alpha=0.85, boxstyle="round,pad=0.15"))
 
-    plt.xticks([])
-    plt.yticks([])
+
 
     plt.tight_layout(pad=0.5)
     return fig

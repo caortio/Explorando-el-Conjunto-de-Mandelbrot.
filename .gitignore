@@ -3,17 +3,6 @@
 venv/
 ENV/
 
-# Archivos grandes / resultados
-results/figures/*
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-*.DS_Store
-*.pdf
-*.png
-*.jpg
-
 # Notebooks temporales
 .ipynb_checkpoints/
 *.ipynb_checkpoints/
