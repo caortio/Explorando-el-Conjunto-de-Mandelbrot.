@@ -21,5 +21,10 @@ python -m venv .venv
 .\.venv\Scripts\activate    # Windows
 pip install -r requirements.txt
 
-## Generar figuras
+## Figuras de python
 python src/visualization/nombreFichero.py
+
+## Animación del conjunto de Julia
+<video autoplay loop muted width="700">
+  <source src="videos/julia_mandelbrot.mp4" type="video/mp4">
+</video>
