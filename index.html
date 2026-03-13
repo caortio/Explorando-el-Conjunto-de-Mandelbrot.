@@ -5,21 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mandelbrot & Julia</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin:0; padding:0; box-sizing:border-box; }
     body, html {
-      height: 100%;
-      background: #000;
-      overflow: hidden;
+      height:100%;
+      background:#000;
+      overflow:hidden;
     }
     video {
-      width: 100vw;
-      height: 100vh;
-      object-fit: contain;   /* ← cambia a 'cover' si quieres que llene todo (puede recortar bordes) */
-      background: #000;
+      width:100vw;
+      height:100vh;
+      object-fit: contain;   /* cambia a 'cover' si prefieres que llene todo recortando bordes */
+      display:block;
     }
   </style>
 </head>
@@ -29,15 +25,13 @@
   </video>
 
   <script>
-    // Pantalla completa con un solo clic (necesario por restricciones de navegadores)
-    document.addEventListener('click', function goFull() {
-      const vid = document.querySelector('video');
-      if (vid.requestFullscreen) vid.requestFullscreen();
-      else if (vid.webkitRequestFullscreen) vid.webkitRequestFullscreen();
-      else if (vid.msRequestFullscreen) vid.msRequestFullscreen();
-      // Puedes descomentar la siguiente línea si quieres que el clic solo sirva una vez
-      // document.removeEventListener('click', goFull);
-    }, { once: false });   // ← quita { once: false } si solo quieres que funcione el primer clic
+    // Pantalla completa real con un clic en cualquier parte (obligatorio por navegadores)
+    document.addEventListener('click', function() {
+      const v = document.querySelector('video');
+      if (v.requestFullscreen) v.requestFullscreen();
+      else if (v.webkitRequestFullscreen) v.webkitRequestFullscreen();
+      else if (v.msRequestFullscreen) v.msRequestFullscreen();
+    });
   </script>
 </body>
 </html>
